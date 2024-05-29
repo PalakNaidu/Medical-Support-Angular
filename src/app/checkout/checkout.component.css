@@ -1,0 +1,46 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 6rem;
+    position: relative;
+
+  }
+
+  .buy-now-button {
+    position: absolute; 
+    top: 10px; 
+    right: 10px;
+  }
+  
+  .medicine-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .medicine-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .medicine-details {
+    flex: 1;
+  }
+  
+  .medicine-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .medicine-price,
+  .medicine-quantity {
+    margin-top: 5px;
+    color: #666;
+  }
+  
+  button {
+    margin-left: 20px;
+  }
+  
