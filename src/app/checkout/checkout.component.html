@@ -1,0 +1,18 @@
+<!-- checkout.component.html -->
+<div class="container">
+    <h2>Checkout</h2>
+    <button mat-raised-button color="primary" class="buy-now-button" ><mat-icon>shopping_cart</mat-icon>
+        Buy Now</button>
+
+    <div class="medicine-list">
+      <div *ngFor="let medicine of selectedMedicines" class="medicine-item">
+        <div class="medicine-details">
+          <div class="medicine-name">{{ medicine.name }}</div>
+          <div class="medicine-price">Price: {{ medicine.price }}</div>
+          <div class="medicine-quantity">Quantity: {{ medicine.quantity }}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  

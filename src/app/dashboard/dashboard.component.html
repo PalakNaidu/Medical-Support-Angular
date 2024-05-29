@@ -1,0 +1,27 @@
+<div class="container mt-5 pt-5">
+
+    <mat-toolbar color="primary">
+        <span>Dashboard</span>
+        <span class="spacer"></span>
+        <a mat-button routerLink="/add-patient">Add Patient</a>
+        <a mat-button routerLink="/checkout">Checkout</a>
+      </mat-toolbar>
+      
+      <div class="dashboard-content">
+        <mat-card>
+          <mat-card-title class="search-title ml-3">Search Medicines</mat-card-title>
+          <mat-card-content>
+            <mat-form-field class="search-field" appearance="outline">
+              <mat-label class="custom-label">Search Medicines</mat-label>
+              <input matInput class="custom-input">
+              <!-- <mat-icon matSuffix>search</mat-icon> -->
+            </mat-form-field>
+            <mat-list *ngIf="medicines.length">
+              <mat-list-item *ngFor="let medicine of medicines">{{ medicine.name }}</mat-list-item>
+            </mat-list>
+            <p *ngIf="!medicines.length">No medicines found.</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+</div>

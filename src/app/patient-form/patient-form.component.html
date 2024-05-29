@@ -1,0 +1,19 @@
+<div class="login-container" >
+    <h2>Add Patient</h2>
+    <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="name" formControlName="name">
+        <mat-error *ngIf="patientForm.get('name')?.invalid && (patientForm.get('name')?.dirty || patientForm.get('name')?.touched)">
+          Please enter a valid name.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="age" placeholder="age" formControlName="age">
+        <mat-error *ngIf="patientForm.get('age')?.invalid && (patientForm.get('age')?.dirty || patientForm.get('age')?.touched)">
+          age must be at least 6 characters long.
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="patientForm.invalid">Add</button>
+    </form>
+  </div>
+  
