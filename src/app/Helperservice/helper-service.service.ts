@@ -9,8 +9,6 @@ export class HelperServiceService {
   private cart:any = [];
   private cartSubject: BehaviorSubject<[]> = new BehaviorSubject<[]>(this.cart);
 
-
-
   constructor() { }
 
   addToCart(medicine:any) {
