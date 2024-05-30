@@ -1,5 +1,5 @@
 export interface APIResponse {
     data?: any;
-    message: string;
-    isError: boolean;
+    status_message: string;
+    status: boolean;
 }

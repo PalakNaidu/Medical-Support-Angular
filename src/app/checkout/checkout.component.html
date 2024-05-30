@@ -7,9 +7,9 @@
     <div class="medicine-list">
       <div *ngFor="let medicine of selectedMedicines" class="medicine-item">
         <div class="medicine-details">
-          <div class="medicine-name">{{ medicine.name }}</div>
-          <div class="medicine-price">Price: {{ medicine.price }}</div>
-          <div class="medicine-quantity">Quantity: {{ medicine.quantity }}</div>
+          <div class="medicine-name">{{ medicine?.medicine_name }}</div>
+          <div class="medicine-price">Content: {{ medicine?.content }}</div>
+          <div class="medicine-quantity">Price: {{ medicine?.mrp }} Rs.</div>
         </div>
       </div>
     </div>

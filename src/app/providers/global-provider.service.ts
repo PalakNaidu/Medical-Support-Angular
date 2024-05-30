@@ -8,24 +8,40 @@ import { Observable } from 'rxjs';
     providedIn: 'root',
 })
 export class GlobalProviderService {
-    public API_URL: string = 'http://52.23.161.176:3000/api';
+    public API_URL: string = 'https://dev-api.evitalrx.in/v1/fulfillment';
 
     constructor(private http: HttpClient) {}
 
-    httpPost(apiEndPoint: string, postObj: Object, headers?: HttpHeaders): Observable<any> {
-      return this.http.post<any>(this.API_URL + apiEndPoint, postObj, { headers });
+    httpPost(apiEndPoint: string, postObj: Object) {
+      return new Promise((resolve, reject) => {
+        this.http.post(this.API_URL + apiEndPoint, postObj)
+          .subscribe((res:any ) => {
+            if (res.status_message && res.data != null) {
+              resolve(res.data);
+            } else {
+              reject(res.message);
+            }
+          }, err => {
+            console.log('post', err);
+            reject(err);
+          });
+      });
     }
   
-    httpPut(apiEndPoint: string, postObj: Object): Observable<any> {
-      return this.http.put<any>(this.API_URL + apiEndPoint, postObj);
-    }
-  
-    httpGet(apiEndPoint: string): Observable<any> {
-      return this.http.get<any>(this.API_URL + apiEndPoint);
-    }
-  
-    externalHttpGet(apiEndPoint: string): Observable<APIResponse> {
-      return this.http.get<APIResponse>(apiEndPoint);
+    httpGet(apiEndPoint: string) {
+      return new Promise((resolve, reject) => {
+        this.http.get(this.API_URL + apiEndPoint)
+          .subscribe((res: any) => {
+            if (res.success_message && res.data != null) {
+              resolve(res.data);
+            } else {
+              reject(res.message);
+            }
+          }, err => {
+            console.error(err);
+            reject(err);
+          });
+      });
     }
   
 }

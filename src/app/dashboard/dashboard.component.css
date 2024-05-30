@@ -60,4 +60,34 @@ p {
     margin-left: 20px;
   }
   
+  .cart_btn{
+    margin: 40px;
+  }
+  
+  .medicine-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+  }
+  
+  .medicine-list-item:last-child {
+    border-bottom: none;
+  }
+  
+  .medicine-info {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .cart-btn {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .medicine-list {
+    margin-top: 16px;
+  }
   

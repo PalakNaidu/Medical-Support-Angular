@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GlobalProviderService } from '../providers/global-provider.service';
+import { Router } from '@angular/router';
+import { HelperServiceService } from '../Helperservice/helper-service.service';  
+
 
 @Component({
   selector: 'app-checkout',
@@ -6,10 +11,23 @@ import { Component } from '@angular/core';
   styleUrl: './checkout.component.css'
 })
 export class CheckoutComponent {
-  selectedMedicines = [
-    { name: 'Medicine A', price: 10, quantity: 2 },
-    { name: 'Medicine B', price: 15, quantity: 1 },
-    { name: 'Medicine C', price: 20, quantity: 3 }
-  ];
+  selectedMedicines: any[] = [];
+
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private globalProvider: GlobalProviderService,
+    private router: Router,
+    private HelperServiceService: HelperServiceService
+) {}
+
+ngOnInit(): void {
+  this.selectedMedicines = this.HelperServiceService.getCart();
+  
+  console.log('cart medicines---',this.selectedMedicines)
+
+}
+
+
 
 }
