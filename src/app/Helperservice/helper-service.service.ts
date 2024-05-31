@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HelperServiceService {
   private cart:any = [];
+  public patientDetails:any = [];
   private cartSubject: BehaviorSubject<[]> = new BehaviorSubject<[]>(this.cart);
 
   constructor() { }
@@ -17,6 +18,16 @@ export class HelperServiceService {
     this.cartSubject.next(this.cart);
 
     console.log('items---',this.cart)
+  }
+
+  addPatientDetails(patientDetails:any){
+    this.patientDetails.push(patientDetails)
+
+  }
+
+  
+  getPatientDetails() {
+    return this.patientDetails;
   }
 
   getCart() {

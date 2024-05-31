@@ -1,19 +1,75 @@
-<div class="login-container" >
-    <h2>Add Patient</h2>
-    <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
-      <mat-form-field>
-        <input matInput placeholder="name" formControlName="name">
-        <mat-error *ngIf="patientForm.get('name')?.invalid && (patientForm.get('name')?.dirty || patientForm.get('name')?.touched)">
-          Please enter a valid name.
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="age" placeholder="age" formControlName="age">
-        <mat-error *ngIf="patientForm.get('age')?.invalid && (patientForm.get('age')?.dirty || patientForm.get('age')?.touched)">
-          age must be at least 6 characters long.
-        </mat-error>
-      </mat-form-field>
-      <button mat-raised-button color="primary" type="submit" [disabled]="patientForm.invalid">Add</button>
-    </form>
-  </div>
-  
+<div class="login-container">
+  <h2 class="mat-headline">Add Patient</h2>
+  <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="first_name">
+      <mat-error *ngIf="patientForm.get('first_name')?.invalid && (patientForm.get('first_name')?.dirty || patientForm.get('first_name')?.touched)">
+        Please enter a valid first name.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="last_name">
+      <mat-error *ngIf="patientForm.get('last_name')?.invalid && (patientForm.get('last_name')?.dirty || patientForm.get('last_name')?.touched)">
+        Please enter a valid last name.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Mobile</mat-label>
+      <input matInput formControlName="mobile" [maxlength]="10">
+      <mat-error *ngIf="patientForm.get('mobile')?.invalid && (patientForm.get('mobile')?.dirty || patientForm.get('mobile')?.touched)">
+        Please enter a valid mobile number.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Age</mat-label>
+      <input matInput type="number" formControlName="age">
+      <mat-error *ngIf="patientForm.get('age')?.invalid && (patientForm.get('age')?.dirty || patientForm.get('age')?.touched)">
+        Age must be a valid number.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Zip Code</mat-label>
+      <input matInput formControlName="zipcode">
+      <mat-error *ngIf="patientForm.get('zipcode')?.invalid && (patientForm.get('zipcode')?.dirty || patientForm.get('zipcode')?.touched)">
+        Please enter a valid zip code.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Date of Birth</mat-label>
+      <input matInput type="date" formControlName="dob">
+      <mat-error *ngIf="patientForm.get('dob')?.invalid && (patientForm.get('dob')?.dirty || patientForm.get('dob')?.touched)">
+        Please enter a valid date of birth.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="other">Other</mat-option>
+      </mat-select>
+      <mat-error *ngIf="patientForm.get('gender')?.invalid && (patientForm.get('gender')?.dirty || patientForm.get('gender')?.touched)">
+        Please select a gender.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Blood Group</mat-label>
+      <mat-select formControlName="blood_group">
+        <mat-option value="A+">A+</mat-option>
+        <mat-option value="A-">A-</mat-option>
+        <mat-option value="B+">B+</mat-option>
+        <mat-option value="B-">B-</mat-option>
+        <mat-option value="AB+">AB+</mat-option>
+        <mat-option value="AB-">AB-</mat-option>
+        <mat-option value="O+">O+</mat-option>
+        <mat-option value="O-">O-</mat-option>
+      </mat-select>
+      <mat-error *ngIf="patientForm.get('blood_group')?.invalid && (patientForm.get('blood_group')?.dirty || patientForm.get('blood_group')?.touched)">
+        Please select a blood group.
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="patientForm.invalid">Add</button>
+  </form>
+</div>

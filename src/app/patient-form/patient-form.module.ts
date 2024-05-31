@@ -8,11 +8,12 @@ import { PatientFormRoutingModule } from './patient-form-routing.module';
 import { PatientFormComponent } from './patient-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar'; // Import MatToolbarModule
 import { MatList,MatListItem } from '@angular/material/list';
 import { MatCard , MatCardTitle, MatCardContent } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -27,6 +28,7 @@ import { MatCard , MatCardTitle, MatCardContent } from '@angular/material/card';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatButtonModule,
     MatToolbarModule,
     MatList,
