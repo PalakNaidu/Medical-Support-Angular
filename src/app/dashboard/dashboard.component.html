@@ -13,12 +13,23 @@
     </div>
 
       <mat-card-content>
-        <mat-form-field class="search-field" appearance="outline">
-          <mat-label class="custom-label">Search Medicines</mat-label>
+        <div class="patient-select-field mt-5">
+          <div class="patient-select-field mt-5">
+            <mat-form-field appearance="outline" class="col-8 search-field">
+              <input matInput placeholder="Enter Patient ID" [(ngModel)]="patientId" name="patientId">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="getPatientDetails()">Get Details</button>
+          </div>
+          <div *ngIf="patientDetails">
+            <p>{{ patientDetails[0].firstname }} {{ patientDetails[0].lastname }}</p>
+          </div>
 
-          <input matInput class="custom-input" #searchInput>
+        <mat-form-field class="search-field col-8" appearance="outline">
+
+          <input matInput class="custom-input" placeholder="Search Medicines" #searchInput>
         </mat-form-field>
         <button class="col-2" mat-raised-button color="primary" (click)="onSearch(searchInput.value)">Search</button>
+        </div>
 
 
         <mat-list *ngIf="medicines.length">

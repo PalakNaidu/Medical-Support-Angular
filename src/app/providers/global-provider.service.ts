@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class GlobalProviderService {
     public API_URL: string = 'https://dev-api.evitalrx.in/v1/fulfillment';
+      public API_KEY: string = 'wFIMP75eG1sQEh8vVAdXykgzF4mLhDw3';
 
     constructor(private http: HttpClient) {}
 

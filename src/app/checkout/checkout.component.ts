@@ -12,6 +12,7 @@ import { HelperServiceService } from '../Helperservice/helper-service.service';
 })
 export class CheckoutComponent {
   selectedMedicines: any[] = [];
+  patientDetails : any;
 
 
   constructor(
@@ -23,8 +24,9 @@ export class CheckoutComponent {
 
 ngOnInit(): void {
   this.selectedMedicines = this.HelperServiceService.getCart();
+  this.patientDetails = this.HelperServiceService.getPatientDetails();
   
-  console.log('cart medicines---',this.selectedMedicines)
+  console.log('cart medicines---',this.selectedMedicines,this.patientDetails)
 
 }
 
