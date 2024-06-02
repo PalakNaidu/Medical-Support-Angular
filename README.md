@@ -20,7 +20,7 @@ Before you begin, ensure you have met the following requirements:
 
 - **Code Editor:** You'll need a code editor to work with the project files. Popular choices include Visual Studio Code, Sublime Text, or WebStorm.
 
-- **Git:** Some familiarity with Git version control will be helpful, especially if you plan to collaborate with others or use version control for your project.
+- **Git:** Some familiarity with Git version control will be helpful.
 
 
 ## Installation
@@ -70,14 +70,11 @@ To run the app locally, use the following command:
 
 ## Screenshots
 
-### Landing Page
+### Dashboard Page
 ![Landing Page](screenshots/dashboard.png)
 
 ### Login Page
 ![Login Page](screenshots/image.png)
-
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
 
 ### Add Patient Form
 ![Add Patient Form](screenshots/add-patient.png)
