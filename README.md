@@ -1,6 +1,6 @@
 # MEDICAL MANAGEMENT PORTAL 
 
-This project is a web-based Medical Management System designed to manage patient information, handle medicine orders, and streamline the ordering process. The application consists of several key pages: a landing page, a login page, a dashboard, a form to add patient details, and a checkout page. The dashboard includes functionality to search for medicines using an API, and the checkout page allows users to place orders for the medicines.
+This project is a web-based Medical Management System designed to manage patient information, handle medicine orders, and streamline the ordering process. The application consists of several key pages: a login page, a dashboard, a form to add patient details, and a checkout page. The dashboard includes functionality to search for medicines using an API, and the checkout page allows users to place orders for the medicines.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
 
