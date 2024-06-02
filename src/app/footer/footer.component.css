@@ -1,0 +1,19 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    height: 40px;
+    
+  }
+
+  .app-title, .footer-title {
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+.footer-txt{
+    font-size: 12px;
+}

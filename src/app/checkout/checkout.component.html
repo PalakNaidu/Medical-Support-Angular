@@ -1,7 +1,7 @@
 <!-- checkout.component.html -->
 <div class="container">
     <h2>Checkout</h2>
-    <button mat-raised-button color="primary" class="buy-now-button" ><mat-icon>shopping_cart</mat-icon>
+    <button mat-raised-button color="primary" class="buy-now-button" (click)="checkout()"><mat-icon>shopping_cart</mat-icon>
         Buy Now</button>
 
     <div class="medicine-list">
@@ -11,7 +11,13 @@
           <div class="medicine-price">Content: {{ medicine?.content }}</div>
           <div class="medicine-quantity">Price: {{ medicine?.mrp }} Rs.</div>
         </div>
+        <div class="medicine-details">
+          <div class="medicine-name">Patient Name: {{ patientDetails[0]?.firstname }} {{ patientDetails[0]?.lastname }}</div>
+          <div class="medicine-price">Patient Id: {{ patientDetails[0]?.patient_id }}</div>
+
+        </div>
       </div>
+      
     </div>
 
   </div>

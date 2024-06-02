@@ -1,10 +1,9 @@
 <!-- app.component.html -->
 <mat-toolbar color="primary">
-  <span class="app-title">Medicine Order App</span>
+  <span class="app-title">Medical Support App</span>
   <span class="spacer"></span>
   <button mat-button routerLink="/" class="nav-link">Home</button>
   <button mat-button routerLink="/login" class="nav-link">Login</button>
-  <button mat-button routerLink="/register" class="nav-link">Register</button>
   <button mat-icon-button routerLink="/checkout" class="nav-link">
     <mat-icon *ngIf="cartCount > 0">shopping_cart</mat-icon>
     <span class="cart-count" *ngIf="cartCount > 0">{{ cartCount }}</span>
