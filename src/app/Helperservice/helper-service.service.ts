@@ -21,7 +21,7 @@ export class HelperServiceService {
   }
 
   addPatientDetails(patientDetails:any){
-    this.patientDetails.push(patientDetails)
+    this.patientDetails =patientDetails
 
   }
 

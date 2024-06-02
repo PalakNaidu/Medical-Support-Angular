@@ -91,3 +91,6 @@ p {
     margin-top: 16px;
   }
   
+  ::ng-deep .mat-mdc-button .mat-mdc-button-ripple{
+    background-color: lightgrey;
+  }

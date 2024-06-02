@@ -13,6 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class DashboardComponent {
   public searchTerm ='';
+  public details : boolean = false;
 
   public medicines:any = [];
   public patientId: string = '';
@@ -51,7 +52,7 @@ export class DashboardComponent {
   }
   
   addToCart(medicine:any) {
-    if(this.patientId){
+    if(this.patientId && this.details){
     this.HelperServiceService.addToCart(medicine);
     this.toaster.success('Item Added','Success')
     }
@@ -73,6 +74,7 @@ export class DashboardComponent {
       .then((data: any) => {
           console.log('Submit Response--', data);
           this.patientDetails = data;
+          this.details = true;
           this.HelperServiceService.addPatientDetails(this.patientDetails);
 
   
